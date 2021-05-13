@@ -31,7 +31,7 @@ defmodule Notified do
     Services.Clear.call()
   end
 
-  @spec get!(integer) :: {:ok, notification} | {:error, term}
+  @spec get!(integer) :: notification
   def get!(id) do
     Repo.get!(Notification, id)
   end
