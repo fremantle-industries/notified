@@ -16,7 +16,7 @@ defmodule Notified do
     Services.Create.call(subject, message, tags)
   end
 
-  @spec mark_seen(Ecto.Changeset.t()) :: {:ok, notification} | {:error, Ecto.Changeset.t()}
+  @spec mark_seen(notification) :: {:ok, notification} | {:error, Ecto.Changeset.t()}
   def mark_seen(notification) do
     Services.MarkSeen.call(notification)
   end
