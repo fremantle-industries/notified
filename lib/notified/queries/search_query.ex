@@ -3,6 +3,6 @@ defmodule Notified.Queries.SearchQuery do
   alias Notified.Notification
 
   def call(_search_term) do
-    from(Notification)
+    from(Notification, order_by: [asc: :inserted_at])
   end
 end
