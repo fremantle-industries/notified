@@ -1,6 +1,11 @@
 # Notified
 
+[![Build Status](https://github.com/fremantle-industries/notified/workflows/test/badge.svg?branch=main)](https://github.com/fremantle-industries/notified/actions?query=workflow%3Atest)
+[![hex.pm version](https://img.shields.io/hexpm/v/notified.svg?style=flat)](https://hex.pm/packages/notified)
+
 An Elixir library for application notifications
+
+This library is the core notification engine. For a front endphoenix live UI check out [notified_phoenix](https://github.com/fremantle-industries/notified_phoenix)
 
 ## Installation
 
