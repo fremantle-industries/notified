@@ -5,7 +5,7 @@
 
 An Elixir library for application notifications
 
-This library is the core notification engine. For a front endphoenix live UI check out [notified_phoenix](https://github.com/fremantle-industries/notified_phoenix)
+This library is the core notification engine. For a frontend phoenix live UI check out [notified_phoenix](https://github.com/fremantle-industries/notified_phoenix)
 
 ## Installation
 
