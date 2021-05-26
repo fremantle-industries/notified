@@ -1,4 +1,5 @@
 defmodule Notified.Services.Create do
+  require Logger
   alias Notified.{Config, Notification, Repo, Topic}
 
   @type subject :: String.t()
@@ -37,9 +38,17 @@ defmodule Notified.Services.Create do
   end
 
   defp pubsub_send(notification) do
-    msg = {:notified, :create, notification.id}
-    Phoenix.PubSub.broadcast(Config.pubsub_server(), Topic.create("*"), msg)
-    Phoenix.PubSub.broadcast(Config.pubsub_server(), Topic.create(notification.id), msg)
+    try do
+      msg = {:notified, :create, notification.id}
+      Phoenix.PubSub.broadcast(Config.pubsub_server(), Topic.create("*"), msg)
+      Phoenix.PubSub.broadcast(Config.pubsub_server(), Topic.create(notification.id), msg)
+    rescue
+      error ->
+        Logger.error(
+          "Could not publish create notification on #{Config.pubsub_server()}, #{inspect(error)}"
+        )
+    end
+
     notification
   end
 
