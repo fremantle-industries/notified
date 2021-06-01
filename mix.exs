@@ -4,7 +4,7 @@ defmodule Notified.MixProject do
   def project do
     [
       app: :notified,
-      version: "0.0.4",
+      version: "0.0.5",
       elixir: "~> 1.10",
       package: package(),
       start_permanent: Mix.env() == :prod,
