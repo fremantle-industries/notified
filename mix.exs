@@ -24,8 +24,8 @@ defmodule Notified.MixProject do
 
   defp deps do
     [
-      {:bamboo, "~> 2.1.0"},
-      {:bamboo_smtp, "~> 4.0.1"},
+      {:bamboo, "~> 2.1"},
+      {:bamboo_smtp, "~> 4.0"},
       {:confex, "~> 3.5"},
       {:ecto, "~> 3.6"},
       {:ecto_sql, "~> 3.6"},
