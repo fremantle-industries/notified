@@ -9,14 +9,13 @@ defmodule Notified.Notification do
     field(:message, :string)
     field(:tags, {:array, :string})
     field(:seen_at, :utc_datetime_usec)
-    field(:seen, :boolean)
 
     timestamps()
   end
 
   def changeset(notification, attrs) do
     notification
-    |> cast(attrs, ~w[subject message tags seen_at seen]a)
+    |> cast(attrs, ~w[subject message tags seen_at]a)
     |> validate_required(~w[subject message]a)
   end
 end

@@ -29,7 +29,7 @@ defmodule Notified.MixProject do
       {:confex, "~> 3.5"},
       {:ecto, "~> 3.6"},
       {:ecto_sql, "~> 3.6"},
-      {:etso, "~> 0.1.5"},
+      {:etso, "~> 0.1.6"},
       {:phoenix_pubsub, "~> 2.0"},
       {:paged_query, "~> 0.0.2"},
       {:ex_doc, ">= 0.0.0", only: :dev},
