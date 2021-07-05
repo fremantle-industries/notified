@@ -13,7 +13,9 @@ Add the `notified` package to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:notified, "~> 0.0.5"}]
+  [
+    {:notified, "~> 0.0.6"}
+  ]
 end
 ```
 
